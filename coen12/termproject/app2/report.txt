@@ -1,0 +1,8 @@
+Worst case Big-O run times for application 2
+createDataSet: O(1)
+destroyDataSet: O(1)
+searchID: O(1)
+insertion: O(1)
+deletion: O(1)
+
+I chose a SET abstract data structure for this with three different arrays. One for age and one for ID. For each of these arrays, the ID acts as the index and if the element at that index is -1, then that means that there is no student with that ID. All of these Big-O run times are optimized as they are all O(1), the most efficient run time possible. 
