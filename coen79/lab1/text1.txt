@@ -1,0 +1,9 @@
+1_counter.exe compiled successfully.
+1_counter.exe got correct output.
+Exit code: 0
+2_pattern.exe compiled successfully.
+2_pattern.exe got correct output.
+Exit code: 0
+3_convert.exe compiled successfully.
+3_convert.exe got correct output.
+Exit code: 1
