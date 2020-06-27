@@ -1,0 +1,6 @@
+Name	Group Size
+----------------
+nan 1
+poitt 3
+qwer 5
+daren 7
