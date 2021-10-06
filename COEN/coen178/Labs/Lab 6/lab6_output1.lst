@@ -1,0 +1,438 @@
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise2.sql
+
+Trigger created.
+
+No errors.
+SQL> select * from accounts_6;
+
+no rows selected
+
+SQL> select * from totals_6;
+
+no rows selected
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/insertion1.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> select * from accounts_6;
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         2000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+SQL> update accounts_6
+  2  set amount = 1000
+  3  where accountno = 'a1523';
+
+1 row updated.
+
+SQL> select * from accounts_6;
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         1000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> drop trigger acc_cust_trig;
+drop trigger acc_cust_trig
+*
+ERROR at line 1:
+ORA-04080: trigger 'ACC_CUST_TRIG' does not exist 
+
+
+SQL> drop trigger acct_cust_trig;
+
+Trigger dropped.
+
+SQL> delete from accounts_6;
+
+6 rows deleted.
+
+SQL> delete from totals_6;
+
+4 rows deleted.
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise2.sql
+
+Warning: Trigger created with compilation errors.
+
+Errors for TRIGGER ACCT_CUST_TRIG:
+
+LINE/COL ERROR                                                                  
+-------- -----------------------------------------------------------------      
+15/9     PL/SQL: SQL Statement ignored                                          
+15/13    PL/SQL: ORA-00922: missing or invalid option                           
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise2.sql
+
+Trigger created.
+
+No errors.
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/insertion1.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+SQL> select * from accounts_6;
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         2000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> update accounts_6
+  2  set amount = 1000
+  3  where accountno = 'a1523';
+
+1 row updated.
+
+SQL> select * from accounts_6;
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         1000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> update accounts_6
+  2  set amount = 3000
+  3  where accountno = 'a1523';
+
+1 row updated.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> drop trigger acct_cust_trig;
+
+Trigger dropped.
+
+SQL> delete from accounts_6;
+
+6 rows deleted.
+
+SQL> delete from totals_6;
+
+4 rows deleted.
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise2.sql
+
+Trigger created.
+
+No errors.
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/insertion1.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+SQL> select * from accounts_6;
+
+ACCOU ACCOUNTTYP     AMOUNT CUSTN                                               
+----- ---------- ---------- -----                                               
+a1523 checking         2000 c1                                                  
+a2134 saving           5000 c1                                                  
+a4378 checking         1000 c2                                                  
+a5363 saving           8000 c2                                                  
+a7236 checking          500 c33                                                 
+a8577 checking          150 c20                                                 
+
+6 rows selected.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> update accounts_6
+  2  set amount = 1000
+  3  where accountno = 'a1523';
+
+1 row updated.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> drop trigger acct_cust_trig;
+
+Trigger dropped.
+
+SQL> delete from accounts_6;
+
+6 rows deleted.
+
+SQL> delete from totals_6;
+
+4 rows deleted.
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise3.sql
+SP2-0310: unable to open file "/home/dliu1/Documents/COEN/coen178/Lab6/exercise3.sql"
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise4.sql
+
+Warning: Trigger created with compilation errors.
+
+Errors for TRIGGER ACCT_CUST_TRIG:
+
+LINE/COL ERROR                                                                  
+-------- -----------------------------------------------------------------      
+12/5     PL/SQL: SQL Statement ignored                                          
+14/5     PL/SQL: ORA-00936: missing expression                                  
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise4.sql
+
+Warning: Trigger created with compilation errors.
+
+Errors for TRIGGER ACCT_CUST_TRIG:
+
+LINE/COL ERROR                                                                  
+-------- -----------------------------------------------------------------      
+11/9     PL/SQL: SQL Statement ignored                                          
+13/9     PL/SQL: ORA-00936: missing expression                                  
+SQL> 
+SQL> Create Or Replace Trigger Acct_Cust_Trig
+  2  AFTER INSERT OR UPDATE ON Accounts_6
+  3  FOR EACH ROW
+  4  BEGIN
+  5  	If inserting then
+  6  		update totals_6
+  7  		set totalAmount = totalAmount + :new.amount
+  8  		where custno = :new.custno;
+  9  
+ 10  		insert into totals_6 (select :new.custno, :new.amount from dual
+ 11  	where not exists (select * from TOTALS_6 where custno = :new.custno));
+ 12  	END IF;
+ 13  	if updating then
+ 14  /* If we are updating we want to correctly set the totalAmount
+ 15  	to the new amount that may be >= or < old amount
+ 16  	Complete the query */
+ 17  
+ 18  		update totals_6
+ 19  		set totalAmount = totalAmount + :new.amount - :old.amount
+ 20  		where custno = :new.custno;
+ 21  	end if;
+ 22  END;
+ 23  /
+
+Trigger created.
+
+SQL> Show Errors;
+No errors.
+SQL> drop trigger acct_cust_trig;
+
+Trigger dropped.
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise4.sql
+
+Trigger created.
+
+No errors.
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/insertion2.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           7000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> update accounts_6
+  2  set amount = 1000
+  3  where accountno = 'a1523';
+
+1 row updated.
+
+SQL> select * from totals_6;
+
+CUSTN TOTALAMOUNT                                                               
+----- -----------                                                               
+c1           6000                                                               
+c2           9000                                                               
+c33           500                                                               
+c20           150                                                               
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise5.sql
+
+Trigger created.
+
+No errors.
+SQL> select * from bankcust_6;
+
+CUSTN CUSTNAME             STREET                         CITY                  
+----- -------------------- ------------------------------ --------------------  
+c1    Smith                32 Lincoln st                  SJ                    
+c2    Jones                44 Benton st                   SJ                    
+c3    Peters               12 palm st                     SFO                   
+c20   Chen                 20 san felipo                  LA                    
+c33   Williams             11 cherry Ave                  SFO                   
+
+SQL> update bankcust_6
+  2  where custno = 'c99'
+  3  
+SQL> update bankcust_6
+  2  set custno = 'c99';
+update bankcust_6
+       *
+ERROR at line 1:
+ORA-20999: Cannot update a Primary Key 
+ORA-06512: at "DLIU1.NOUPDATEPK_TRIG", line 3 
+ORA-04088: error during execution of trigger 'DLIU1.NOUPDATEPK_TRIG' 
+
+
+SQL> update bankcust_6
+  2  set custno = 'c99'
+  3  where custno = 'c1';
+update bankcust_6
+       *
+ERROR at line 1:
+ORA-20999: Cannot update a Primary Key 
+ORA-06512: at "DLIU1.NOUPDATEPK_TRIG", line 3 
+ORA-04088: error during execution of trigger 'DLIU1.NOUPDATEPK_TRIG' 
+
+
+SQL> select * from bankcust_6;
+
+CUSTN CUSTNAME             STREET                         CITY                  
+----- -------------------- ------------------------------ --------------------  
+c1    Smith                32 Lincoln st                  SJ                    
+c2    Jones                44 Benton st                   SJ                    
+c3    Peters               12 palm st                     SFO                   
+c20   Chen                 20 san felipo                  LA                    
+c33   Williams             11 cherry Ave                  SFO                   
+
+SQL> spool off;

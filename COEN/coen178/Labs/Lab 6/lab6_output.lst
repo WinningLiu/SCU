@@ -1,0 +1,31 @@
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/exercise1.sql
+
+Trigger created.
+
+No errors.
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab6/insertion.sql
+From Trigger Customer NO: c1 Customer Name: Smith City: SJ                      
+
+1 row created.
+
+From Trigger Customer NO: c2 Customer Name: Jones City: SJ                      
+
+1 row created.
+
+From Trigger Customer NO: c3 Customer Name: Peters City: SFO                    
+
+1 row created.
+
+From Trigger Customer NO: c20 Customer Name: Chen City: LA                      
+
+1 row created.
+
+From Trigger Customer NO: c33 Customer Name: Williams City: SFO                 
+
+1 row created.
+
+SQL> alter trigger display_customer_trig disable;
+
+Trigger altered.
+
+SQL> 

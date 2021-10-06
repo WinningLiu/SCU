@@ -1,0 +1,26 @@
+SQL> start/home/dliu1/Documents/COEN/coen178/Lab1/data.sql
+INSERT INTO test VALUES (10, 'ten')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (DLIU1.SYS_C00871179) violated 
+
+
+INSERT INTO test VALUES (11, 'eleven')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (DLIU1.SYS_C00871179) violated 
+
+
+SQL> SELECT * FROM test;
+
+      TNUM STR                                                                  
+---------- ----------                                                           
+         1 A test                                                               
+        10 ten                                                                  
+        11 eleven                                                               
+
+SQL> host ls
+
+SQL> host pwd
+
+SQL> spool off;

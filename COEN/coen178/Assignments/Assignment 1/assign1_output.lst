@@ -1,0 +1,145 @@
+SQL> select * from timspent;
+select * from timspent
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select * from timespent;
+
+no rows selected
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Assignment1/insertion.sql
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+SQL> select * from timespent;
+
+CDATE           WORK    COMMUTE      MEALS   EXERCISE       MISC                
+--------- ---------- ---------- ---------- ---------- ----------                
+21-JAN-21          8          1          2          1          1                
+22-JAN-21          6          0          1          1          1                
+23-JAN-21          9          0          1          0          0                
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Assignment1/Question1.sql
+
+Function created.
+
+No errors.
+SQL> select timeSpentByDate('21-Jan-21');
+select timeSpentByDate('21-Jan-21')
+                                  *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> select timeSpentByDate('21-Jan-21') from dual;
+
+TIMESPENTBYDATE('21-JAN-21')                                                    
+----------------------------                                                    
+                          13                                                    
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Assignment1/Question2.sql
+
+Function created.
+
+No errors.
+SQL> select timeSpentBetweenDatesOn('21-Jan-21', '23-Jan-21', 'work') from dual;
+
+TIMESPENTBETWEENDATESON('21-JAN-21','23-JAN-21','WORK')                         
+-------------------------------------------------------                         
+                                                     23                         
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Assignment1/Question3.sql
+
+Trigger created.
+
+No errors.
+SQL> select * from timespent;
+
+CDATE           WORK    COMMUTE      MEALS   EXERCISE       MISC                
+--------- ---------- ---------- ---------- ---------- ----------                
+21-JAN-21          8          1          2          1          1                
+22-JAN-21          6          0          1          1          1                
+23-JAN-21          9          0          1          0          0                
+
+SQL> select * from overtime;
+
+no rows selected
+
+SQL> insert into timespent values ('24-Jan-21', 10,  1, 2, 1, 2);
+
+1 row created.
+
+SQL> select * from timespent;
+
+CDATE           WORK    COMMUTE      MEALS   EXERCISE       MISC                
+--------- ---------- ---------- ---------- ---------- ----------                
+21-JAN-21          8          1          2          1          1                
+22-JAN-21          6          0          1          1          1                
+23-JAN-21          9          0          1          0          0                
+24-JAN-21         10          1          2          1          2                
+
+SQL> select * from overtime;
+
+COLUMNS_O OVERTIME_HRS                                                          
+--------- ------------                                                          
+14-FEB-21            2                                                          
+
+SQL> insert into timespent values ('25Jan-21', 7  1, 1, 0, 1);
+insert into timespent values ('25Jan-21', 7  1, 1, 0, 1)
+                                             *
+ERROR at line 1:
+ORA-00917: missing comma 
+
+
+SQL> insert into timespent values ('25Jan-21', 7,  1, 1, 0, 1);
+
+1 row created.
+
+SQL> select * from timespent;
+
+CDATE           WORK    COMMUTE      MEALS   EXERCISE       MISC                
+--------- ---------- ---------- ---------- ---------- ----------                
+21-JAN-21          8          1          2          1          1                
+22-JAN-21          6          0          1          1          1                
+25-JAN-21          7          1          1          0          1                
+23-JAN-21          9          0          1          0          0                
+24-JAN-21         10          1          2          1          2                
+
+SQL> select * from overtime;
+
+COLUMNS_O OVERTIME_HRS                                                          
+--------- ------------                                                          
+14-FEB-21            2                                                          
+
+SQL> update timespent
+  2  set work = 9
+  3  where cdate = '22-Jan-21';
+
+1 row updated.
+
+SQL> select * from timespent;
+
+CDATE           WORK    COMMUTE      MEALS   EXERCISE       MISC                
+--------- ---------- ---------- ---------- ---------- ----------                
+21-JAN-21          8          1          2          1          1                
+22-JAN-21          9          0          1          1          1                
+25-JAN-21          7          1          1          0          1                
+23-JAN-21          9          0          1          0          0                
+24-JAN-21         10          1          2          1          2                
+
+SQL> select * from overtime;
+
+COLUMNS_O OVERTIME_HRS                                                          
+--------- ------------                                                          
+14-FEB-21            2                                                          
+14-FEB-21            1                                                          
+
+SQL> spool off;

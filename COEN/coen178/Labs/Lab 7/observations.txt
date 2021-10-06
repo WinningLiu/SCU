@@ -1,0 +1,29 @@
+start /home/dliu1/Documents/COEN/coen178/Lab7/createTable.sql
+
+insert into MyExpenses values (60.23, 15.23,  30.23);
+insert into MyExpenses values (34.83, 23.34, 27.34);
+insert into MyExpenses values (94.32, 44.44, 35.44);
+insert into MyExpenses values (29.12, 10.15, 40.15);
+
+
+Question 1:
+In the test insertion, there is nothing in the budget, startdat and enddate.
+Inserting into PastProjects did not work as there were not enough values.
+
+Inserting into ManagedProducts failed since it cannot modify more than one base table
+through a join view.
+
+Question 4:
+No it did not succeed. It said that itemorder is mutating. 
+
+Question 5:
+So that the prereq in the course table can reference it. 
+The third prereq did not insert properly. Each course can only have 2 prereqs. 
+Right now there are only 2 rows in the prereq table.
+There are now 3 rows.
+The update did not work. The prereq table is still mutating. 
+
+Question 6:
+The constraint that a course cannot have more than 2 prereqs is still enforced, since
+(121, 12) was not inserted.
+The constraint is still enforced with the update statement.

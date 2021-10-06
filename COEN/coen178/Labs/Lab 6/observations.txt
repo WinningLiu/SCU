@@ -1,0 +1,17 @@
+start /home/dliu1/Documents/COEN/coen178/Lab6/insertion2.sql
+start /home/dliu1/Documents/COEN/coen178/Lab6/exercise4.sql
+
+Exercise 2:
+Yes the trigger worked. 
+After inserting the values into accounts_6, I checked if any data was inserted into
+totals_6, and there was data in it.
+c1 has 7000. It agrees with the total amount with the custno of c1.
+
+Exercise 3:
+The amount for c1 is still 7000.
+The amount in totals_6 does not agree with the total amount in accounts_6.
+
+Exercise 4:
+Total for c1 is 7000.
+The new amount for c1 is 6000 after the update.
+The amounts agree with each table.

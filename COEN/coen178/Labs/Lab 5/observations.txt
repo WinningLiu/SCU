@@ -1,0 +1,21 @@
+
+
+
+Question 2:
+a) The function outputs a value of 2000
+b) it outputs the name, title, currentsalary and the raise that they are getting
+Stone	director	100000	3000
+
+Question 3:
+c) 82 directors, 36 advisors
+
+Question 4:
+36 advisors
+
+Question 5:
+a) No rows selected
+b) 37 advisors
+c) Yes, since when we last counted the number of advisors, it was 36. It is now at 37.
+
+Question 6:
+C) Yes. Empcount in empstats decreased by 1;

@@ -1,0 +1,73 @@
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab7/question1.sql
+
+View created.
+
+
+View created.
+
+SQL> select * from currentprojects;
+
+no rows selected
+
+SQL> select * from pastprojects;
+
+PROJE TITLE                MANAG                                                
+----- -------------------- -----                                                
+pj1   Research             e1                                                   
+pj2   Research             e2                                                   
+pd1   Scholarship          e4                                                   
+jk4   Leadership           e5                                                   
+
+SQL> insert into currentprojects values ('p99', 'Testing', 'e2');
+
+1 row created.
+
+SQL> select * from project7;
+
+PROJE TITLE                    BUDGET STARTDATE ENDDATE   MANAG                 
+----- -------------------- ---------- --------- --------- -----                 
+pj1   Research                1000000 10-JAN-19 20-FEB-20 e1                    
+pj2   Research                 100000 10-FEB-19 20-APR-19 e2                    
+pd1   Scholarship               50000 08-OCT-19 28-NOV-19 e4                    
+jk4   Leadership                40000 29-SEP-19 03-OCT-19 e5                    
+p99   Testing                                             e2                    
+
+SQL> insert into pastprojects values ('Testing', 'e2');
+insert into pastprojects values ('Testing', 'e2')
+            *
+ERROR at line 1:
+ORA-00947: not enough values 
+
+
+SQL> create or replace view ManagedProjects AS
+  2  select projectID, title as Project_Title, empName as ManagerName
+  3  from EMP7, Project7
+  4  where EMP7.empid = Project7.managerId;
+
+View created.
+
+SQL> select * from managedprojects;
+
+PROJE PROJECT_TITLE        MANAGERNAME                                          
+----- -------------------- --------------------                                 
+pj1   Research             J.Smith                                              
+pj2   Research             M.Jones                                              
+pd1   Scholarship          S.Curry                                              
+jk4   Leadership           K.Oubre                                              
+p99   Testing              M.Jones                                              
+
+SQL> insert into ManagedProjects values ('p88', 'Design', 'Mary Mason');
+insert into ManagedProjects values ('p88', 'Design', 'Mary Mason')
+*
+ERROR at line 1:
+ORA-01776: cannot modify more than one base table through a join view 
+
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab7/CreateEmpReport.sql
+SP2-0310: unable to open file "/home/dliu1/Documents/COEN/coen178/Lab7/CreateEmpReport.sql"
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab7/CreateEmpReport.sql
+
+TODAY                                                                                                                   
+------------------                                                                                                      
+March 2, 2021                                                                                                           
+

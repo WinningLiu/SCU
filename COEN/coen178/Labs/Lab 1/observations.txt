@@ -1,0 +1,9 @@
+Part 1
+
+When I attempted to add a duplicate tuple, it succeeded in adding it to the table;
+When I attempted to add a duplicate tuple to the table with a primary key, it gave me an error saying "ORA-00001: unique constraint violated".
+When I dropped the trial table, only the test table remained. 
+
+Part 3
+
+452 Rows are retrieved.

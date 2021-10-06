@@ -1,0 +1,145 @@
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab2/lab2_queries1.sql
+
+CUSTI FULLNAME                                                                  
+----- -------------------------                                                 
+c1    JohnSmith                                                                 
+c2    MaryJones                                                                 
+a1    VincentChen                                                               
+a12   GregKing                                                                  
+c7    JamesBond                                                                 
+x10   SusanBlogg                                                                
+
+6 rows selected.
+
+
+CUSTI FIRSTNAME  LASTNAME        CITY                                           
+----- ---------- --------------- ----------                                     
+x10   Susan      Blogg           SFO                                            
+c7    James      Bond            LA                                             
+a1    Vincent    Chen            SJ                                             
+c2    Mary       Jones           SFO                                            
+a12   Greg       King            SJ                                             
+c1    John       Smith           SJ                                             
+
+6 rows selected.
+
+
+SERVICEID  CUSTI DA                                                             
+---------- ----- --                                                             
+dsg1       c1    m                                                              
+dsg1       a12   w                                                              
+dg5        c1    t                                                              
+dg5        c1    r                                                              
+dby3       x10   f                                                              
+
+
+SERVICEID                                                                       
+----------                                                                      
+dsb1                                                                            
+dsg2                                                                            
+dsm2                                                                            
+
+
+FIRSTNAME                                                                       
+----------                                                                      
+John                                                                            
+Mary                                                                            
+Vincent                                                                         
+Greg                                                                            
+James                                                                           
+Susan                                                                           
+
+6 rows selected.
+
+
+LASTNAME                                                                        
+---------------                                                                 
+Smith                                                                           
+King                                                                            
+Blogg                                                                           
+
+
+HIGHEST_SERVICEFEE                                                              
+------------------                                                              
+                30                                                              
+
+
+COUNT(DAY) DA                                                                   
+---------- --                                                                   
+         1 r                                                                    
+         1 t                                                                    
+         1 w                                                                    
+         1 m                                                                    
+         1 f                                                                    
+
+
+COUNT(DAY) DA                                                                   
+---------- --                                                                   
+         1 r                                                                    
+         1 t                                                                    
+         1 w                                                                    
+         1 m                                                                    
+         1 f                                                                    
+
+
+CUSTI CUSTI CITY                                                                
+----- ----- ----------                                                          
+x10   c2    SFO                                                                 
+a12   a1    SJ                                                                  
+c1    a1    SJ                                                                  
+c1    a12   SJ                                                                  
+
+
+CUSTI CUSTI CITY                                                                
+----- ----- ----------                                                          
+x10   c2    SFO                                                                 
+a12   a1    SJ                                                                  
+c1    a1    SJ                                                                  
+c1    a12   SJ                                                                  
+
+
+CUSTI FULLNAME                                                                  
+----- -------------------------                                                 
+c1    JohnSmith                                                                 
+a12   GregKing                                                                  
+x10   SusanBlogg                                                                
+
+
+CUSTI FULLNAME                                                                  
+----- -------------------------                                                 
+c1    JohnSmith                                                                 
+a12   GregKing                                                                  
+x10   SusanBlogg                                                                
+
+
+MAXIMUM_SALARY MINIMUM_SALARY                                                   
+-------------- --------------                                                   
+        179700              0                                                   
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab2/lab2_queries2.sql
+
+MAXIMUM_SALARY MINIMUM_SALARY                                                   
+-------------- --------------                                                   
+        179700              0                                                   
+
+
+EMPNAME                                                                         
+----------                                                                      
+moor                                                                            
+winger                                                                          
+
+SQL> SELECT TABLE_NAME FROM USER_TABLES;
+
+TABLE_NAME                                                                      
+------------------------------                                                  
+TEST                                                                            
+STAFF                                                                           
+SCHEDULE                                                                        
+L_EMP                                                                           
+L_DEPT                                                                          
+DELIVERYSERVICE                                                                 
+CUSTOMER                                                                        
+
+7 rows selected.
+
+SQL> spool off;

@@ -1,0 +1,19 @@
+Excercise 1:
+The output is 
+
+Excericse 2:
+b) The query did not work. The single row subquery returns more than one row, since there is more than one "Young" in the table.
+
+
+Excercise 6:
+Returns the last name of staff with a double vowel in their last name. The 'i' performs case-insensitive matching.
+
+Exercise 8:
+The query works. 
+
+Exercise 9:
+Attempt 1: No it does not work
+Attempt 2: No it does not work
+
+The problem is that in the subquery, it's still the same table as the query on the outside. The way to fix this is to
+have to subquery search for the maximum count(*) in deptid.

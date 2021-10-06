@@ -1,0 +1,521 @@
+SQL> start /home/Documents/COEN/coen178/Lab3/queries_part1.sql
+SP2-0310: unable to open file "/home/Documents/COEN/coen178/Lab3/queries_part1.sql"
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab3/queries_part1.sql
+
+DEPTI      EMPNO EMPNAME    DEPTNAME                                            
+----- ---------- ---------- ----------                                          
+d1             6 chen       Research                                            
+d1             3 wayne      Research                                            
+d1             1 smith      Research                                            
+d1             5 king       Research                                            
+d2             2 jones      Devt                                                
+d3             7 winger     Testing                                             
+d3             4 moor       Testing                                             
+
+7 rows selected.
+
+
+FULLNAME                                     SALARY                             
+---------------------------------------- ----------                             
+ Timothy P.Love                              179700                             
+ Michael M.Hash                              179700                             
+
+
+FULLNAME                                     SALARY                             
+---------------------------------------- ----------                             
+ Michael M.Hash                              179700                             
+ Timothy P.Love                              179700                             
+
+
+FULLNAME                                     SALARY                             
+---------------------------------------- ----------                             
+ Michael M.Hash                              179700                             
+ Timothy P.Love                              179700                             
+
+
+FULLNAME                                     SALARY                             
+---------------------------------------- ----------                             
+ Michael M.Hash                              179700                             
+ Timothy P.Love                              179700                             
+
+SP2-0734: unknown command beginning "where sala..." - rest of line ignored.
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Bhowmik                  100000                                                 
+DuBois                   100000                                                 
+Frankel                  100000                                                 
+Hurwitz                  100000                                                 
+Jarvis-Shean             100000                                                 
+Jones                    100000                                                 
+Simas                    100000                                                 
+Teehee                   100000                                                 
+Vega                     100000                                                 
+Zichal                   100000                                                 
+
+10 rows selected.
+
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Bhowmik                  100000                                                 
+DuBois                   100000                                                 
+Frankel                  100000                                                 
+Hurwitz                  100000                                                 
+Jarvis-Shean             100000                                                 
+Jones                    100000                                                 
+Simas                    100000                                                 
+Teehee                   100000                                                 
+Vega                     100000                                                 
+Zichal                   100000                                                 
+
+10 rows selected.
+
+SP2-0734: unknown command beginning "WHERE sala..." - rest of line ignored.
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Alley                     42000                                                 
+Asen                      42000                                                 
+Attili                    58511                                                 
+Ayling                    42000                                                 
+Baggetto                  42000                                                 
+Bates                     42000                                                 
+Bisi                      42000                                                 
+Block                     42000                                                 
+Campbell                  42000                                                 
+Campos                    42000                                                 
+Canery                    58511                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Carden                    42000                                                 
+Castillo                  42000                                                 
+Chhabra                   42000                                                 
+Claude                    58511                                                 
+Cobbina                   42000                                                 
+Conrad                    42000                                                 
+Cuba                      42000                                                 
+Cunningham                42000                                                 
+Donovan                   42000                                                 
+Dorsett                   42000                                                 
+Faulman                   42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Fenn                      42000                                                 
+Fergenson                 42000                                                 
+Ford                      42000                                                 
+Frank                     42000                                                 
+Godfrey                   42000                                                 
+Gottlieb                  42000                                                 
+Grant                     42000                                                 
+Hanson                    42000                                                 
+Harris                    42000                                                 
+Hegde                     42000                                                 
+Hernandez                 42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Hiatt                     42000                                                 
+Hughes                    42000                                                 
+Jackson                   42000                                                 
+Jones                     42000                                                 
+Kennedy                   42000                                                 
+Ledbetter                 42000                                                 
+Lee                       42000                                                 
+Lewin                     42000                                                 
+Lewis                     42000                                                 
+Limon                     42000                                                 
+Metcalf                   42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Mrazek                    42000                                                 
+Northern                  42000                                                 
+Ocampo                    42000                                                 
+Oxtoby                    42000                                                 
+Page                      42000                                                 
+Pope                      42000                                                 
+Portilla                  42000                                                 
+Posey                     42000                                                 
+Pulliam                   42000                                                 
+Robertson                 42000                                                 
+Schaub                    42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Schmuck                   42000                                                 
+Sinha                     42000                                                 
+Sirbu                     42000                                                 
+Smith                     42000                                                 
+Smith                     42000                                                 
+Stickel                   42000                                                 
+Swanson                   42000                                                 
+Tennison                  42000                                                 
+Thomas                    42000                                                 
+Tranchin                  42000                                                 
+Young                     42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Young                     58511                                                 
+
+67 rows selected.
+
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Alley                     42000                                                 
+Asen                      42000                                                 
+Attili                    58511                                                 
+Ayling                    42000                                                 
+Baggetto                  42000                                                 
+Bates                     42000                                                 
+Bisi                      42000                                                 
+Block                     42000                                                 
+Campbell                  42000                                                 
+Campos                    42000                                                 
+Canery                    58511                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Carden                    42000                                                 
+Castillo                  42000                                                 
+Chhabra                   42000                                                 
+Claude                    58511                                                 
+Cobbina                   42000                                                 
+Conrad                    42000                                                 
+Cuba                      42000                                                 
+Cunningham                42000                                                 
+Donovan                   42000                                                 
+Dorsett                   42000                                                 
+Faulman                   42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Fenn                      42000                                                 
+Fergenson                 42000                                                 
+Ford                      42000                                                 
+Frank                     42000                                                 
+Godfrey                   42000                                                 
+Gottlieb                  42000                                                 
+Grant                     42000                                                 
+Hanson                    42000                                                 
+Harris                    42000                                                 
+Hegde                     42000                                                 
+Hernandez                 42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Hiatt                     42000                                                 
+Hughes                    42000                                                 
+Jackson                   42000                                                 
+Jones                     42000                                                 
+Kennedy                   42000                                                 
+Ledbetter                 42000                                                 
+Lee                       42000                                                 
+Lewin                     42000                                                 
+Lewis                     42000                                                 
+Limon                     42000                                                 
+Metcalf                   42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Mrazek                    42000                                                 
+Northern                  42000                                                 
+Ocampo                    42000                                                 
+Oxtoby                    42000                                                 
+Page                      42000                                                 
+Pope                      42000                                                 
+Portilla                  42000                                                 
+Posey                     42000                                                 
+Pulliam                   42000                                                 
+Robertson                 42000                                                 
+Schaub                    42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Schmuck                   42000                                                 
+Sinha                     42000                                                 
+Sirbu                     42000                                                 
+Smith                     42000                                                 
+Smith                     42000                                                 
+Stickel                   42000                                                 
+Swanson                   42000                                                 
+Tennison                  42000                                                 
+Thomas                    42000                                                 
+Tranchin                  42000                                                 
+Young                     42000                                                 
+
+LAST                     SALARY                                                 
+-------------------- ----------                                                 
+Young                     58511                                                 
+
+67 rows selected.
+
+
+SALARIES_ABOVE_100K                                                             
+-------------------                                                             
+                134                                                             
+
+
+SALARIES_ABOVE_100K                                                             
+-------------------                                                             
+                134                                                             
+
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    102000                   8                                                  
+    158500                   9                                                  
+    155500                   5                                                  
+    145000                   1                                                  
+    112774                   1                                                  
+    113000                   5                                                  
+    136134                   1                                                  
+    130000                   5                                                  
+    129758                   1                                                  
+    165000                   1                                                  
+    153500                   2                                                  
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    162500                   1                                                  
+    139500                   1                                                  
+    130500                  26                                                  
+    100904                   2                                                  
+    149000                   2                                                  
+    114000                   3                                                  
+    172200                  23                                                  
+    123758                   1                                                  
+    147500                   4                                                  
+    162900                   1                                                  
+    115731                   1                                                  
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    172000                   1                                                  
+    122744                   1                                                  
+    140259                   1                                                  
+    106839                   1                                                  
+    110500                   1                                                  
+    132009                   1                                                  
+    148510                   2                                                  
+    126251                   1                                                  
+    113605                   1                                                  
+    140000                   2                                                  
+    120000                   8                                                  
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    105211                   1                                                  
+    179700                   2                                                  
+    150000                   3                                                  
+    102829                   1                                                  
+    110000                   1                                                  
+    144868                   1                                                  
+    107770                   1                                                  
+
+40 rows selected.
+
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    102000                   8                                                  
+    158500                   9                                                  
+    155500                   5                                                  
+    145000                   1                                                  
+    112774                   1                                                  
+    113000                   5                                                  
+    136134                   1                                                  
+    130000                   5                                                  
+    129758                   1                                                  
+    165000                   1                                                  
+    153500                   2                                                  
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    162500                   1                                                  
+    139500                   1                                                  
+    130500                  26                                                  
+    100904                   2                                                  
+    149000                   2                                                  
+    114000                   3                                                  
+    172200                  23                                                  
+    123758                   1                                                  
+    147500                   4                                                  
+    162900                   1                                                  
+    115731                   1                                                  
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    172000                   1                                                  
+    122744                   1                                                  
+    140259                   1                                                  
+    106839                   1                                                  
+    110500                   1                                                  
+    132009                   1                                                  
+    148510                   2                                                  
+    126251                   1                                                  
+    113605                   1                                                  
+    140000                   2                                                  
+    120000                   8                                                  
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    105211                   1                                                  
+    179700                   2                                                  
+    150000                   3                                                  
+    102829                   1                                                  
+    110000                   1                                                  
+    144868                   1                                                  
+    107770                   1                                                  
+
+40 rows selected.
+
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    130500                  26                                                  
+    172200                  23                                                  
+
+
+    SALARY SALARIES_ABOVE_100K                                                  
+---------- -------------------                                                  
+    130500                  26                                                  
+    172200                  23                                                  
+
+
+LAST                                                                            
+--------------------                                                            
+Bookey-Baker                                                                    
+Brooke                                                                          
+Deese                                                                           
+Freeman                                                                         
+Goodman                                                                         
+Goodman                                                                         
+Green                                                                           
+Green                                                                           
+Greenawalt                                                                      
+Greene                                                                          
+Keenan                                                                          
+
+LAST                                                                            
+--------------------                                                            
+Koo                                                                             
+Lee                                                                             
+Lee                                                                             
+Reed                                                                            
+Reeves                                                                          
+Sheehy                                                                          
+Smoot                                                                           
+Sweeney                                                                         
+Teehee                                                                          
+Voorman                                                                         
+
+21 rows selected.
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab3/queries_part2.sql
+
+LAST                                                                            
+--------------------                                                            
+Bookey-Baker                                                                    
+Brooke                                                                          
+Deese                                                                           
+Freeman                                                                         
+Goodman                                                                         
+Goodman                                                                         
+Green                                                                           
+Green                                                                           
+Greenawalt                                                                      
+Greene                                                                          
+Keenan                                                                          
+
+LAST                                                                            
+--------------------                                                            
+Koo                                                                             
+Lee                                                                             
+Lee                                                                             
+Reed                                                                            
+Reeves                                                                          
+Sheehy                                                                          
+Smoot                                                                           
+Sweeney                                                                         
+Teehee                                                                          
+Voorman                                                                         
+
+21 rows selected.
+
+
+DEPTN   EMPCOUNT                                                                
+----- ----------                                                                
+d3             2                                                                
+d1             4                                                                
+d2             1                                                                
+
+
+DEPTN   EMPCOUNT                                                                
+----- ----------                                                                
+d3             2                                                                
+d1             4                                                                
+d2             1                                                                
+
+
+DEPTN DEPTNAME     EMPCOUNT                                                     
+----- ---------- ----------                                                     
+d1    Research            4                                                     
+d2    Devt                1                                                     
+d3    Testing             2                                                     
+
+SELECT deptono, deptname, empcount FROM (SELECT deptid AS deptno, count(*) AS empcount from L_EMP GROUP BY deptid), L_DEPT
+       *
+ERROR at line 1:
+ORA-00904: "DEPTONO": invalid identifier 
+
+
+SELECT deptono, deptname, empcount FROM (SELECT deptid AS deptno, count(*) AS empcount from L_EMP GROUP BY deptid), L_DEPT
+       *
+ERROR at line 1:
+ORA-00904: "DEPTONO": invalid identifier 
+
+
+SELECT deptono, deptname, empcount FROM (SELECT deptid AS deptno, count(*) AS empcount from L_EMP GROUP BY deptid), L_DEPT
+       *
+ERROR at line 1:
+ORA-00904: "DEPTONO": invalid identifier 
+
+
+SP2-0734: unknown command beginning "GROUP BY d..." - rest of line ignored.
+
+DEPTI   COUNT(*)                                                                
+----- ----------                                                                
+d1             4                                                                
+
+
+DEPTI      EMPNO EMPNAME    DEPTNAME                                            
+----- ---------- ---------- ----------                                          
+d1             6 chen       Research                                            
+d1             3 wayne      Research                                            
+d1             1 smith      Research                                            
+d1             5 king       Research                                            
+d2             2 jones      Devt                                                
+d3             7 winger     Testing                                             
+d3             4 moor       Testing                                             
+
+7 rows selected.
+
+
+DEPTI      EMPNO EMPNAME    DEPTNAME                                            
+----- ---------- ---------- ----------                                          
+d1             6 chen       Research                                            
+d1             3 wayne      Research                                            
+d1             1 smith      Research                                            
+d1             5 king       Research                                            
+d2             2 jones      Devt                                                
+d3             7 winger     Testing                                             
+d3             4 moor       Testing                                             
+
+7 rows selected.
+
+SQL> spool off;

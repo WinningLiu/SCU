@@ -1,0 +1,9 @@
+A) I was not able to insert the last row in schedule due to an integrity constraint. This most likely means that there is no customer ID of 'c32' in the Customer table.
+
+B) I was not able to insert values of ('dsg2','c1','s') again due to integrity constraint. This id due to the fact that the day in Schedule cannot be 's'.
+
+Part 2)
+
+e) Does not work since we only allow 'm' in days, not 'M'.
+
+i) It works. Shows pairs of customers where they are in the same city, but shows duplicate tuples. 

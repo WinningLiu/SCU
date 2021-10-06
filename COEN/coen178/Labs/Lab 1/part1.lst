@@ -1,0 +1,99 @@
+SQL> CREATE TABLE trial(
+  2  tnum int,
+  3  str char(10)
+  4  );
+
+Table created.
+
+SQL> INSERT INTO trial VALUES (1, 'A test');
+
+1 row created.
+
+SQL> INSERT INTO trial VALUES (2, 'B test');
+
+1 row created.
+
+SQL> INSERT INTO trial VALUES (3, 'C test');
+
+1 row created.
+
+SQL> SELECT * from trial
+  2  
+SQL> SELECT * from trial;
+
+      TNUM STR                                                                  
+---------- ----------                                                           
+         1 A test                                                               
+         2 B test                                                               
+         3 C test                                                               
+
+SQL> SELECT tnum FROM trial;
+
+      TNUM                                                                      
+----------                                                                      
+         1                                                                      
+         2                                                                      
+         3                                                                      
+
+SQL> INSESRT INTO trial VALUES (1, 'A test');
+SP2-0734: unknown command beginning "INSESRT IN..." - rest of line ignored.
+SQL> INSERT INTO trial VALUES (1, 'A test');
+
+1 row created.
+
+SQL> SELECT * FROM trial;
+
+      TNUM STR                                                                  
+---------- ----------                                                           
+         1 A test                                                               
+         2 B test                                                               
+         3 C test                                                               
+         1 A test                                                               
+
+SQL> CREATE TAABLE test (
+  2  
+SQL> CREATE TABLE test ((
+  2  
+SQL> CREATE TABLE test (
+  2  tnum int,
+  3  str char(10), PRIMARY KEY(tnum)
+  4  );
+
+Table created.
+
+SQL> INSERT INTO test VALUES (1, 'A test);
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> INSERT INTO test VALUES (1, 'A test');
+
+1 row created.
+
+SQL> INSERT INTO test VALUES (1, 'A test');
+INSERT INTO test VALUES (1, 'A test')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (DLIU1.SYS_C00871179) violated 
+
+
+SQL> SELECT TABLE_NAME
+  2  FROM USER_TABLES;
+
+TABLE_NAME                                                                      
+------------------------------                                                  
+TRIAL                                                                           
+TEST                                                                            
+
+SQL> DROP TABLE trial;
+
+Table dropped.
+
+SQL> SELECT TABLE_NAME
+  2  FROM USER_TABLES;
+
+TABLE_NAME                                                                      
+------------------------------                                                  
+TEST                                                                            
+
+SQL> spool off;

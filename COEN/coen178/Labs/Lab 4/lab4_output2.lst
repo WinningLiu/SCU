@@ -1,0 +1,809 @@
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab4/data2.sql
+
+no rows selected
+
+SP2-0734: unknown command beginning "name varch..." - rest of line ignored.
+SP2-0734: unknown command beginning "Project va..." - rest of line ignored.
+SP2-0734: unknown command beginning "constraint..." - rest of line ignored.
+SP2-0734: unknown command beginning "foreign ke..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command "); */" - rest of line ignored.
+
+no rows selected
+
+
+97 rows created.
+
+SQL> select * from Emp_work;
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Agnew                                                                           
+Albino                                                                          
+Alley                                                                           
+Amorsingh                                                                       
+Anderson                                                                        
+Andrias                                                                         
+Anello                                                                          
+Asen                                                                            
+Attili                                                                          
+Axelrod                                                                         
+Ayling                                                                          
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gage                                                                            
+Garcia                                                                          
+Gardaphe                                                                        
+Gaspard                                                                         
+Gibbs                                                                           
+Gillette                                                                        
+Godfrey                                                                         
+Gomez                                                                           
+Gonzalez                                                                        
+Goodman                                                                         
+Gottlieb                                                                        
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gottry                                                                          
+Graham                                                                          
+Grant                                                                           
+Gray                                                                            
+Green                                                                           
+Greenawalt                                                                      
+Greene                                                                          
+Groth                                                                           
+Raizk                                                                           
+Rathod                                                                          
+Reed                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Reeves                                                                          
+Reinstein                                                                       
+Richardson                                                                      
+Rittner                                                                         
+Rivadeneira                                                                     
+Roach                                                                           
+Roberts                                                                         
+Robertson                                                                       
+Roche                                                                           
+Roddick                                                                         
+Rodriguez                                                                       
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Rosalsky                                                                        
+Rouse                                                                           
+Ruemmler                                                                        
+Rundlet                                                                         
+Ryan                                                                            
+Sabochik                                                                        
+Sahgal                                                                          
+Samuels                                                                         
+Sanders                                                                         
+Santucci                                                                        
+Sass                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sathe                                                                           
+Saunders                                                                        
+Schafer                                                                         
+Schaub                                                                          
+Schiliro                                                                        
+Schmuck                                                                         
+Schuker                                                                         
+Schulman                                                                        
+Schwartz                                                                        
+Setser                                                                          
+Seymour                                                                         
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Shah                                                                            
+Shapiro                                                                         
+Shaw                                                                            
+Sheehy                                                                          
+Sher                                                                            
+Showers                                                                         
+Sibley                                                                          
+Siegel                                                                          
+Simas                                                                           
+Singiser                                                                        
+Sinha                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sirbu                                                                           
+Skoczek                                                                         
+Smith                                                                           
+Smoot                                                                           
+Sobel                                                                           
+Spencer                                                                         
+Starkey                                                                         
+Stephens                                                                        
+Stickel                                                                         
+Stoev                                                                           
+Stone                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Stoneman                                                                        
+Stracko                                                                         
+Strautmanis                                                                     
+Summers                                                                         
+Sutphen                                                                         
+Sutton                                                                          
+Swanson                                                                         
+Sweeney                                                                         
+Swire                                                                           
+
+97 rows selected.
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab4/data2.sql
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Agnew                                                                           
+Albino                                                                          
+Alley                                                                           
+Amorsingh                                                                       
+Anderson                                                                        
+Andrias                                                                         
+Anello                                                                          
+Asen                                                                            
+Attili                                                                          
+Axelrod                                                                         
+Ayling                                                                          
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gage                                                                            
+Garcia                                                                          
+Gardaphe                                                                        
+Gaspard                                                                         
+Gibbs                                                                           
+Gillette                                                                        
+Godfrey                                                                         
+Gomez                                                                           
+Gonzalez                                                                        
+Goodman                                                                         
+Gottlieb                                                                        
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gottry                                                                          
+Graham                                                                          
+Grant                                                                           
+Gray                                                                            
+Green                                                                           
+Greenawalt                                                                      
+Greene                                                                          
+Groth                                                                           
+Raizk                                                                           
+Rathod                                                                          
+Reed                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Reeves                                                                          
+Reinstein                                                                       
+Richardson                                                                      
+Rittner                                                                         
+Rivadeneira                                                                     
+Roach                                                                           
+Roberts                                                                         
+Robertson                                                                       
+Roche                                                                           
+Roddick                                                                         
+Rodriguez                                                                       
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Rosalsky                                                                        
+Rouse                                                                           
+Ruemmler                                                                        
+Rundlet                                                                         
+Ryan                                                                            
+Sabochik                                                                        
+Sahgal                                                                          
+Samuels                                                                         
+Sanders                                                                         
+Santucci                                                                        
+Sass                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sathe                                                                           
+Saunders                                                                        
+Schafer                                                                         
+Schaub                                                                          
+Schiliro                                                                        
+Schmuck                                                                         
+Schuker                                                                         
+Schulman                                                                        
+Schwartz                                                                        
+Setser                                                                          
+Seymour                                                                         
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Shah                                                                            
+Shapiro                                                                         
+Shaw                                                                            
+Sheehy                                                                          
+Sher                                                                            
+Showers                                                                         
+Sibley                                                                          
+Siegel                                                                          
+Simas                                                                           
+Singiser                                                                        
+Sinha                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sirbu                                                                           
+Skoczek                                                                         
+Smith                                                                           
+Smoot                                                                           
+Sobel                                                                           
+Spencer                                                                         
+Starkey                                                                         
+Stephens                                                                        
+Stickel                                                                         
+Stoev                                                                           
+Stone                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Stoneman                                                                        
+Stracko                                                                         
+Strautmanis                                                                     
+Summers                                                                         
+Sutphen                                                                         
+Sutton                                                                          
+Swanson                                                                         
+Sweeney                                                                         
+Swire                                                                           
+
+97 rows selected.
+
+SP2-0734: unknown command beginning "name varch..." - rest of line ignored.
+SP2-0734: unknown command beginning "Project va..." - rest of line ignored.
+SP2-0734: unknown command beginning "constraint..." - rest of line ignored.
+SP2-0734: unknown command beginning "foreign ke..." - rest of line ignored.
+SP2-0044: For a list of known commands enter HELP
+and to leave enter EXIT.
+SP2-0042: unknown command "); */" - rest of line ignored.
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Agnew                                                                           
+Albino                                                                          
+Alley                                                                           
+Amorsingh                                                                       
+Anderson                                                                        
+Andrias                                                                         
+Anello                                                                          
+Asen                                                                            
+Attili                                                                          
+Axelrod                                                                         
+Ayling                                                                          
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gage                                                                            
+Garcia                                                                          
+Gardaphe                                                                        
+Gaspard                                                                         
+Gibbs                                                                           
+Gillette                                                                        
+Godfrey                                                                         
+Gomez                                                                           
+Gonzalez                                                                        
+Goodman                                                                         
+Gottlieb                                                                        
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gottry                                                                          
+Graham                                                                          
+Grant                                                                           
+Gray                                                                            
+Green                                                                           
+Greenawalt                                                                      
+Greene                                                                          
+Groth                                                                           
+Raizk                                                                           
+Rathod                                                                          
+Reed                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Reeves                                                                          
+Reinstein                                                                       
+Richardson                                                                      
+Rittner                                                                         
+Rivadeneira                                                                     
+Roach                                                                           
+Roberts                                                                         
+Robertson                                                                       
+Roche                                                                           
+Roddick                                                                         
+Rodriguez                                                                       
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Rosalsky                                                                        
+Rouse                                                                           
+Ruemmler                                                                        
+Rundlet                                                                         
+Ryan                                                                            
+Sabochik                                                                        
+Sahgal                                                                          
+Samuels                                                                         
+Sanders                                                                         
+Santucci                                                                        
+Sass                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sathe                                                                           
+Saunders                                                                        
+Schafer                                                                         
+Schaub                                                                          
+Schiliro                                                                        
+Schmuck                                                                         
+Schuker                                                                         
+Schulman                                                                        
+Schwartz                                                                        
+Setser                                                                          
+Seymour                                                                         
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Shah                                                                            
+Shapiro                                                                         
+Shaw                                                                            
+Sheehy                                                                          
+Sher                                                                            
+Showers                                                                         
+Sibley                                                                          
+Siegel                                                                          
+Simas                                                                           
+Singiser                                                                        
+Sinha                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sirbu                                                                           
+Skoczek                                                                         
+Smith                                                                           
+Smoot                                                                           
+Sobel                                                                           
+Spencer                                                                         
+Starkey                                                                         
+Stephens                                                                        
+Stickel                                                                         
+Stoev                                                                           
+Stone                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Stoneman                                                                        
+Stracko                                                                         
+Strautmanis                                                                     
+Summers                                                                         
+Sutphen                                                                         
+Sutton                                                                          
+Swanson                                                                         
+Sweeney                                                                         
+Swire                                                                           
+
+97 rows selected.
+
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Agnew                                                                           
+Albino                                                                          
+Alley                                                                           
+Amorsingh                                                                       
+Anderson                                                                        
+Andrias                                                                         
+Anello                                                                          
+Asen                                                                            
+Attili                                                                          
+Axelrod                                                                         
+Ayling                                                                          
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gage                                                                            
+Garcia                                                                          
+Gardaphe                                                                        
+Gaspard                                                                         
+Gibbs                                                                           
+Gillette                                                                        
+Godfrey                                                                         
+Gomez                                                                           
+Gonzalez                                                                        
+Goodman                                                                         
+Gottlieb                                                                        
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gottry                                                                          
+Graham                                                                          
+Grant                                                                           
+Gray                                                                            
+Green                                                                           
+Greenawalt                                                                      
+Greene                                                                          
+Groth                                                                           
+Raizk                                                                           
+Rathod                                                                          
+Reed                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Reeves                                                                          
+Reinstein                                                                       
+Richardson                                                                      
+Rittner                                                                         
+Rivadeneira                                                                     
+Roach                                                                           
+Roberts                                                                         
+Robertson                                                                       
+Roche                                                                           
+Roddick                                                                         
+Rodriguez                                                                       
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Rosalsky                                                                        
+Rouse                                                                           
+Ruemmler                                                                        
+Rundlet                                                                         
+Ryan                                                                            
+Sabochik                                                                        
+Sahgal                                                                          
+Samuels                                                                         
+Sanders                                                                         
+Santucci                                                                        
+Sass                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sathe                                                                           
+Saunders                                                                        
+Schafer                                                                         
+Schaub                                                                          
+Schiliro                                                                        
+Schmuck                                                                         
+Schuker                                                                         
+Schulman                                                                        
+Schwartz                                                                        
+Setser                                                                          
+Seymour                                                                         
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Shah                                                                            
+Shapiro                                                                         
+Shaw                                                                            
+Sheehy                                                                          
+Sher                                                                            
+Showers                                                                         
+Sibley                                                                          
+Siegel                                                                          
+Simas                                                                           
+Singiser                                                                        
+Sinha                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sirbu                                                                           
+Skoczek                                                                         
+Smith                                                                           
+Smoot                                                                           
+Sobel                                                                           
+Spencer                                                                         
+Starkey                                                                         
+Stephens                                                                        
+Stickel                                                                         
+Stoev                                                                           
+Stone                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Stoneman                                                                        
+Stracko                                                                         
+Strautmanis                                                                     
+Summers                                                                         
+Sutphen                                                                         
+Sutton                                                                          
+Swanson                                                                         
+Sweeney                                                                         
+Swire                                                                           
+
+97 rows selected.
+
+SP2-0734: unknown command beginning "regexp_lik..." - rest of line ignored.
+
+NAME                                                                            
+-------------------------                                                       
+Agnew                                                                           
+Albino                                                                          
+Alley                                                                           
+Amorsingh                                                                       
+Anderson                                                                        
+Andrias                                                                         
+Anello                                                                          
+Asen                                                                            
+Attili                                                                          
+Axelrod                                                                         
+Ayling                                                                          
+
+NAME                                                                            
+-------------------------                                                       
+Gage                                                                            
+Garcia                                                                          
+Gardaphe                                                                        
+Gaspard                                                                         
+Gibbs                                                                           
+Gillette                                                                        
+Godfrey                                                                         
+Gomez                                                                           
+Gonzalez                                                                        
+Goodman                                                                         
+Gottlieb                                                                        
+
+NAME                                                                            
+-------------------------                                                       
+Gottry                                                                          
+Graham                                                                          
+Grant                                                                           
+Gray                                                                            
+Green                                                                           
+Greenawalt                                                                      
+Greene                                                                          
+Groth                                                                           
+Raizk                                                                           
+Rathod                                                                          
+Reed                                                                            
+
+NAME                                                                            
+-------------------------                                                       
+Reeves                                                                          
+Reinstein                                                                       
+Richardson                                                                      
+Rittner                                                                         
+Rivadeneira                                                                     
+Roach                                                                           
+Roberts                                                                         
+Robertson                                                                       
+Roche                                                                           
+Roddick                                                                         
+Rodriguez                                                                       
+
+NAME                                                                            
+-------------------------                                                       
+Rosalsky                                                                        
+Rouse                                                                           
+Ruemmler                                                                        
+Rundlet                                                                         
+Ryan                                                                            
+Sabochik                                                                        
+Sahgal                                                                          
+Samuels                                                                         
+Sanders                                                                         
+Santucci                                                                        
+Sass                                                                            
+
+NAME                                                                            
+-------------------------                                                       
+Sathe                                                                           
+Saunders                                                                        
+Schafer                                                                         
+Schaub                                                                          
+Schiliro                                                                        
+Schmuck                                                                         
+Schuker                                                                         
+Schulman                                                                        
+Schwartz                                                                        
+Setser                                                                          
+Seymour                                                                         
+
+NAME                                                                            
+-------------------------                                                       
+Shah                                                                            
+Shapiro                                                                         
+Shaw                                                                            
+Sheehy                                                                          
+Sher                                                                            
+Showers                                                                         
+Sibley                                                                          
+Siegel                                                                          
+Simas                                                                           
+Singiser                                                                        
+Sinha                                                                           
+
+NAME                                                                            
+-------------------------                                                       
+Sirbu                                                                           
+Skoczek                                                                         
+Smith                                                                           
+Smoot                                                                           
+Sobel                                                                           
+Spencer                                                                         
+Starkey                                                                         
+Stephens                                                                        
+Stickel                                                                         
+Stoev                                                                           
+Stone                                                                           
+
+NAME                                                                            
+-------------------------                                                       
+Stoneman                                                                        
+Stracko                                                                         
+Strautmanis                                                                     
+Summers                                                                         
+Sutphen                                                                         
+Sutton                                                                          
+Swanson                                                                         
+Sweeney                                                                         
+Swire                                                                           
+
+97 rows selected.
+
+SQL> delete from AlphaCoEmp where name = 'Smith';
+delete from AlphaCoEmp where name = 'Smith'
+*
+ERROR at line 1:
+ORA-02292: integrity constraint (DLIU1.FK_ALPHACO) violated - child record 
+found 
+
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab4/test3.sql
+
+Table altered.
+
+
+Table altered.
+
+SQL> delete from AlphaCoEmp where name = 'Smith';
+
+1 row deleted.
+
+SQL> select * from Emp_work;
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Agnew                                                                           
+Albino                                                                          
+Alley                                                                           
+Amorsingh                                                                       
+Anderson                                                                        
+Andrias                                                                         
+Anello                                                                          
+Asen                                                                            
+Attili                                                                          
+Axelrod                                                                         
+Ayling                                                                          
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gage                                                                            
+Garcia                                                                          
+Gardaphe                                                                        
+Gaspard                                                                         
+Gibbs                                                                           
+Gillette                                                                        
+Godfrey                                                                         
+Gomez                                                                           
+Gonzalez                                                                        
+Goodman                                                                         
+Gottlieb                                                                        
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Gottry                                                                          
+Graham                                                                          
+Grant                                                                           
+Gray                                                                            
+Green                                                                           
+Greenawalt                                                                      
+Greene                                                                          
+Groth                                                                           
+Raizk                                                                           
+Rathod                                                                          
+Reed                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Reeves                                                                          
+Reinstein                                                                       
+Richardson                                                                      
+Rittner                                                                         
+Rivadeneira                                                                     
+Roach                                                                           
+Roberts                                                                         
+Robertson                                                                       
+Roche                                                                           
+Roddick                                                                         
+Rodriguez                                                                       
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Rosalsky                                                                        
+Rouse                                                                           
+Ruemmler                                                                        
+Rundlet                                                                         
+Ryan                                                                            
+Sabochik                                                                        
+Sahgal                                                                          
+Samuels                                                                         
+Sanders                                                                         
+Santucci                                                                        
+Sass                                                                            
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sathe                                                                           
+Saunders                                                                        
+Schafer                                                                         
+Schaub                                                                          
+Schiliro                                                                        
+Schmuck                                                                         
+Schuker                                                                         
+Schulman                                                                        
+Schwartz                                                                        
+Setser                                                                          
+Seymour                                                                         
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Shah                                                                            
+Shapiro                                                                         
+Shaw                                                                            
+Sheehy                                                                          
+Sher                                                                            
+Showers                                                                         
+Sibley                                                                          
+Siegel                                                                          
+Simas                                                                           
+Singiser                                                                        
+Sinha                                                                           
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Sirbu                                                                           
+Skoczek                                                                         
+Smoot                                                                           
+Sobel                                                                           
+Spencer                                                                         
+Starkey                                                                         
+Stephens                                                                        
+Stickel                                                                         
+Stoev                                                                           
+Stone                                                                           
+Stoneman                                                                        
+
+NAME                      PROJECT                                               
+------------------------- --------------------                                  
+Stracko                                                                         
+Strautmanis                                                                     
+Summers                                                                         
+Sutphen                                                                         
+Sutton                                                                          
+Swanson                                                                         
+Sweeney                                                                         
+Swire                                                                           
+
+96 rows selected.
+
+SQL> spool off;

@@ -1,0 +1,24 @@
+Question 1:
+The error rasied says unique constraint violated. We can fix this by adding a distinct in front of last in the select query. 
+419 rows were created.
+There is nothing in the title column and a salary of 0 for all names.
+
+Question 2:
+a) The i makes it so that it is searching without case-sensitivity.
+b) 97 rows were inserted into Emp_work table.
+c) The deletion did not work. This is due to the fact that Emp_work has a foreign key constraint on AlphaCoEmp, and any deletion or update to a tuple
+in AlphaCoEmp would violate that relation.
+
+Question 3:
+a) The table was altered successfuly. 
+b) Yes.
+c) 'Smith" was successfuly deleted from both the AlphaCoEmp table and Emp__work table
+
+Question 4:
+a) The procedure compiled without errors.
+c) It outputs PL/SQL procedure successfuly completed. If output is set on, then it prints 'Hello' + whatever was passed into the exec.
+
+Question 5:
+a) It displays 54, which I would assume would just be a random number between 10 and 100.
+
+

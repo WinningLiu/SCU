@@ -1,0 +1,140 @@
+SQL> delete from itemorder;
+SQL> drop trigger itemorder_after_insert_trig;
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab7/question4.sql
+No errors.
+SQL> insert into itemorder values ('o1', 100);
+insert into itemorder values ('o1', 100)
+            *
+ERROR at line 1:
+ORA-04091: table DLIU1.ITEMORDER is mutating, trigger/function may not see it 
+ORA-06512: at "DLIU1.ITEMORDER_AFTER_INSERT_TRIG", line 4 
+ORA-04088: error during execution of trigger 'DLIU1.ITEMORDER_AFTER_INSERT_TRIG' 
+
+
+SQL> select * from course;
+
+  COURSENO COURSENAME                                                                                                   
+---------- --------------------                                                                                         
+        10 C++                                                                                                          
+        11 Java                                                                                                         
+        12 Python                                                                                                       
+       121 Web                                                                                                          
+       133 Software Eng                                                                                                 
+SQL> drop trigger limittest;
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab7/question5.sql
+drop trigger limittest
+*
+ERROR at line 1:
+ORA-04080: trigger 'LIMITTEST' does not exist 
+
+
+courseNo INTEGER PRIMARY KEY,
+*
+ERROR at line 2:
+ORA-00928: missing SELECT keyword 
+
+
+CREATE TABLE Course_Prereq
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object 
+
+
+insert into Course values (10,'C++')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (DLIU1.SYS_C00894499) violated 
+
+
+insert into Course values (11,'Java')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (DLIU1.SYS_C00894499) violated 
+
+
+insert into Course values (12,'Python')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (DLIU1.SYS_C00894499) violated 
+
+
+insert into Course values (121,'Web')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (DLIU1.SYS_C00894499) violated 
+
+
+No errors.
+SQL> select * from course_prereq;
+SQL> insert into course_prereq values (121, 11);
+SQL> insert into course_prereq values (121, 10);
+SQL> select * from course_prereq;
+
+  COURSENO   PREREQNO                                                                                                   
+---------- ----------                                                                                                   
+       121         11                                                                                                   
+       121         10                                                                                                   
+SQL> insert into course_prereq values (121, 12);
+insert into course_prereq values (121, 12)
+            *
+ERROR at line 1:
+ORA-20000: Only 2 prereqs for course 
+ORA-06512: at "DLIU1.LIMITTEST", line 19 
+ORA-04088: error during execution of trigger 'DLIU1.LIMITTEST' 
+
+
+SQL> select * from course_prereq;
+
+  COURSENO   PREREQNO                                                                                                   
+---------- ----------                                                                                                   
+       121         11                                                                                                   
+       121         10                                                                                                   
+SQL> insert into course_prereq values (133, 12);
+SQL> select * from course_prereq;
+
+  COURSENO   PREREQNO                                                                                                   
+---------- ----------                                                                                                   
+       121         11                                                                                                   
+       121         10                                                                                                   
+       133         12                                                                                                   
+SQL> update course_prereq
+  2  set courseno = 121 where courseno = 133;
+update course_prereq
+       *
+ERROR at line 1:
+ORA-04091: table DLIU1.COURSE_PREREQ is mutating, trigger/function may not see it 
+ORA-06512: at "DLIU1.LIMITTEST", line 6 
+ORA-04088: error during execution of trigger 'DLIU1.LIMITTEST' 
+
+
+SQL> drop trigger limittest;
+SQL> delete from course_prereq;
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab7/question6.sql
+No errors.
+SQL> start /home/dliu1/Documents/COEN/coen178/Lab7/insertion.sql
+insert into Course_Prereq values (121,12)
+            *
+ERROR at line 1:
+ORA-20000: Only 2 prereqs for course 
+ORA-06512: at "DLIU1.LIMITTEST", line 17 
+ORA-04088: error during execution of trigger 'DLIU1.LIMITTEST' 
+
+
+SQL> select * from course_prereq;
+
+  COURSENO   PREREQNO                                                                                                   
+---------- ----------                                                                                                   
+       121         11                                                                                                   
+       121         10                                                                                                   
+       133         12                                                                                                   
+SQL> update course_prereq
+  2  set courseno = 121 where courseno = 133;
+update course_prereq
+       *
+ERROR at line 1:
+ORA-20000: Only 2 prereqs for course 
+ORA-06512: at "DLIU1.LIMITTEST", line 17 
+ORA-04088: error during execution of trigger 'DLIU1.LIMITTEST' 
+
+
+SQL> spool off;
