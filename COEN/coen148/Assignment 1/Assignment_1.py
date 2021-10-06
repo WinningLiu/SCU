@@ -43,17 +43,21 @@ def draw_circle(pixels, radius):
 
 #Question 2
 def fill_row(pixels, first, last, j):
+    #Line contains no pixels of the desired color, so no action is needed
     if first == -1 or last == -1:
         return
+    #Fill in all pixels between first and last pixels needed color
     for i in range(first, last + 1):
         pixels[i, j] = color
 
 def scan_line(pixels):
     
     for j in range(0, col):
+        #Set initial values to -1
         first = -1
         last = -1
         for i in range(0, row):
+            #Record first and last pixels where it is equal to the color
             if pixels[i, j] == color and first == -1:
                 first = i
             if pixels[i, j] == color:
