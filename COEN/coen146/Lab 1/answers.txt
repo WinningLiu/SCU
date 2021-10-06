@@ -1,0 +1,13 @@
+Daren Liu
+1/5/2021
+Lab 1 observations
+Description: Describes what I observed in lab 1.
+
+Sample Code
+./lab1a Gives segmentation fault error.
+
+A delay of 500 gives messy messages, as the messages did not appear in order. The 5000 run was cleaner and the child and parent message were printed one after the other.
+
+Threads:
+
+The same thing happened except a delay of 500 in pthreads seemed cleaner thaan 500 in the sample code.

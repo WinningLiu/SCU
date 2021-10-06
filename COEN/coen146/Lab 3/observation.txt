@@ -1,0 +1,39 @@
+Step 1:
+a. netstat displays all of active internet connections as well as the active UNIX domain sockets. 
+b. ifconfig ddisplays the staatus of the currently active interfaces. 
+c. hostname simply displays the host name of the system, which in my case waas linux11104
+d. I typed ping google.com in order to send packets to the IP address. When the request stops, it gives the packets transmitted, received, loss as well as the time. 
+e. traceroute tracks the route packets taken from an IP address on their way to a given host. 
+f. telnet communicaates with another host using the TELNET protocal.
+g. host converts names to IP addresses and vice versa. Both host and dig perform DNS lookups. 
+h. route manipulates the kernel's IP routing tables. 
+i. arp manipulates or displays the kernel's IPv4 network neighbour cache. 
+
+Step 2:
+Host names: google.com, bbc.co.uk, yandex.ru
+-Sending 64 bytes to google.com
+a. 0% packet loss
+b. The round trip time was 2.27 ms
+
+-sending 128 bytes to bbc.co.uk
+a. 0% packet loss
+b. The round trip time was 2.54 ms
+
+-sending 258 bytes to yandex.ru
+a. 0% packet loss
+b. The round trip time was 178 ms
+
+c. While the RTT between google.com and bbc.co.uk was not significant, the RTT for yandex.ru was significatly higher. Therefore the further away you are sending your packets, it will result in a higher RTT value. 
+
+Step 4:
+a. When I typed telnet gaia.cs.umass.edu 80, it seems to have connected me with the domain. 
+b. It seems to have returned a HTML script
+c. index.php is the name of the file that is being retrieved. HTTP 1.1. Everything seems to be HTML script, which describes the page that is being returned. 
+
+Step 5: 
+-google.com
+Port 80 was connected successfully. Port 3389 did not connect successfully.
+-bbc.co.uk
+Port 80 was connected successfully, although the escape character would not work for some reason. Port 3389 did not connect. 
+-yandex.ru
+Port 80 was connected successfully, although the escape character would not work for some reason. Port 3389 did not connect. 
