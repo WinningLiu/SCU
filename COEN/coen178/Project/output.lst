@@ -1,0 +1,395 @@
+SQL> start /home/dliu1/Documents/COEN/coen178/Project/reset
+drop procedure addItemOrder
+*
+ERROR at line 1:
+ORA-04043: object ADDITEMORDER does not exist 
+
+
+
+Procedure dropped.
+
+
+Function dropped.
+
+
+Trigger dropped.
+
+
+Procedure dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Table dropped.
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Project/createTables
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+SQL> start /home/dliu1/Documents/COEN/coen178/Project/inputs
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- ----------------------------------------        
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+g000000000 Daren Liu            dliu3@scu.edu                                   
+111 Welker St.                           10-MAR-21 gold                         
+                                                                                
+g000000001 Stephen Curry        wardellcurry@warriors.com                       
+300 Atherton Av.                         06-JUN-09 gold                         
+                                                                                
+g000000002 Homie Dawg           yaboi@gmail.com                                 
+Lmao EggsDee St.                         15-APR-20 gold                         
+                                                                                
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- ----------------------------------------        
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+r000000000 John Doe             regularjoe@gmail.com                            
+980 Fake Blvd.                                     regular                      
+                                                                                
+r000000001 Peter Griffin        hansolo@hotmail.com                             
+255 Spooner St.                                    regular                      
+                                                                                
+r00000002  Jake Paul            JakePaul@gmail.com                              
+Everyday Bro St.                                   regular                      
+                                                                                
+
+6 rows selected.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+ITEMID          PRICE                                                           
+---------- ----------                                                           
+s000000000      10.99                                                           
+s000000001      15.25                                                           
+s000000002      25.95                                                           
+b000000000      29.99                                                           
+b000000001      15.99                                                           
+b000000002        9.5                                                           
+
+6 rows selected.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+ITEMID     ISBN          TITLE                                    PUBLISHED     
+---------- ------------- ---------------------------------------- ---------     
+NOOFCOPIES                                                                      
+----------                                                                      
+b000000000 9781479580033 Adventures of Superman                   25-AUG-16     
+         5                                                                      
+                                                                                
+b000000001 9780676978995 The Life of Pi                           11-SEP-01     
+         7                                                                      
+                                                                                
+b000000002 9856162516860 Batman and Robin                         23-FEB-17     
+        10                                                                      
+                                                                                
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+ITEMID     SHIR                                                                 
+---------- ----                                                                 
+s000000000 m                                                                    
+s000000001 l                                                                    
+s000000002 xl                                                                   
+
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+CUSTID     ITEMID     ORDERID    ORDERDATE SHIPPEDDA  NOOFITEMS SHIPPINGFEE     
+---------- ---------- ---------- --------- --------- ---------- -----------     
+r000000001 b000000000 PX100ME836 01-MAR-21                    2          10     
+g000000001 b000000001 ASDFN253DS 21-FEB-21                    5           0     
+
+Not enough books. Please try again.                                             
+
+PL/SQL procedure successfully completed.
+
+
+CUSTID     ITEMID     ORDERID    ORDERDATE SHIPPEDDA  NOOFITEMS SHIPPINGFEE     
+---------- ---------- ---------- --------- --------- ---------- -----------     
+r000000001 b000000000 PX100ME836 01-MAR-21                    2          10     
+g000000001 b000000001 ASDFN253DS 21-FEB-21                    5           0     
+
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+CUSTID     ITEMID     ORDERID    ORDERDATE SHIPPEDDA  NOOFITEMS SHIPPINGFEE     
+---------- ---------- ---------- --------- --------- ---------- -----------     
+r000000001 b000000000 PX100ME836 01-MAR-21                    2          10     
+g000000001 b000000001 ASDFN253DS 21-FEB-21                    5           0     
+r000000001 s000000002 DJHFNG5315 02-MAR-21                   10          10     
+g000000002 s000000001 EWKLGQH512 10-MAR-21                   20           0     
+
+
+Procedure created.
+
+No errors.
+
+PL/SQL procedure successfully completed.
+
+Invalid Date: Shipped date is before order date. Please try again.              
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+CUSTID     ITEMID     ORDERID    ORDERDATE SHIPPEDDA  NOOFITEMS SHIPPINGFEE     
+---------- ---------- ---------- --------- --------- ---------- -----------     
+r000000001 b000000000 PX100ME836 01-MAR-21 25-MAR-21          2          10     
+g000000001 b000000001 ASDFN253DS 21-FEB-21 10-MAR-21          5           0     
+r000000001 s000000002 DJHFNG5315 02-MAR-21 24-MAR-21         10          10     
+g000000002 s000000001 EWKLGQH512 10-MAR-21 05-JUN-21         20           0     
+
+
+Function created.
+
+No errors.
+
+COMPUTETOTAL('PX100ME836')                                                      
+--------------------------                                                      
+                     72.98                                                      
+
+
+COMPUTETOTAL('ASDFN253DS')                                                      
+--------------------------                                                      
+                     83.95                                                      
+
+
+COMPUTETOTAL('DJHFNG5315')                                                      
+--------------------------                                                      
+                    282.48                                                      
+
+
+COMPUTETOTAL('EWKLGQH512')                                                      
+--------------------------                                                      
+                    288.23                                                      
+
+
+Trigger created.
+
+No errors.
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- ----------------------------------------        
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+g000000000 Daren Liu            dliu3@scu.edu                                   
+111 Welker St.                           10-MAR-21 gold                         
+                                                                                
+g000000001 Stephen Curry        wardellcurry@warriors.com                       
+300 Atherton Av.                         06-JUN-09 gold                         
+                                                                                
+g000000002 Homie Dawg           yaboi@gmail.com                                 
+Lmao EggsDee St.                         15-APR-20 gold                         
+                                                                                
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- ----------------------------------------        
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+r000000000 John Doe             regularjoe@gmail.com                            
+980 Fake Blvd.                                     regular                      
+                                                                                
+r000000001 Peter Griffin        hansolo@hotmail.com                             
+255 Spooner St.                                    regular                      
+                                                                                
+r00000002  Jake Paul            JakePaul@gmail.com                              
+Everyday Bro St.                                   regular                      
+                                                                                
+
+6 rows selected.
+
+
+CUSTID     ITEMID     ORDERID    ORDERDATE SHIPPEDDA  NOOFITEMS SHIPPINGFEE     
+---------- ---------- ---------- --------- --------- ---------- -----------     
+r000000001 b000000000 PX100ME836 01-MAR-21 25-MAR-21          2          10     
+g000000001 b000000001 ASDFN253DS 21-FEB-21 10-MAR-21          5           0     
+r000000001 s000000002 DJHFNG5315 02-MAR-21 24-MAR-21         10          10     
+g000000002 s000000001 EWKLGQH512 10-MAR-21 05-JUN-21         20           0     
+
+
+1 row updated.
+
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- ----------------------------------------        
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+g000000000 Daren Liu            dliu3@scu.edu                                   
+111 Welker St.                           10-MAR-21 gold                         
+                                                                                
+g000000001 Stephen Curry        wardellcurry@warriors.com                       
+300 Atherton Av.                         06-JUN-09 gold                         
+                                                                                
+g000000002 Homie Dawg           yaboi@gmail.com                                 
+Lmao EggsDee St.                         15-APR-20 gold                         
+                                                                                
+
+CUSTID     NAME                 EMAIL                                           
+---------- -------------------- ----------------------------------------        
+ADDRESS                                  DATEJOINE CUSTTYPE                     
+---------------------------------------- --------- --------                     
+r000000000 John Doe             regularjoe@gmail.com                            
+980 Fake Blvd.                                     regular                      
+                                                                                
+r000000001 Peter Griffin        hansolo@hotmail.com                             
+255 Spooner St.                          12-MAR-21 gold                         
+                                                                                
+r00000002  Jake Paul            JakePaul@gmail.com                              
+Everyday Bro St.                                   regular                      
+                                                                                
+
+6 rows selected.
+
+
+CUSTID     ITEMID     ORDERID    ORDERDATE SHIPPEDDA  NOOFITEMS SHIPPINGFEE     
+---------- ---------- ---------- --------- --------- ---------- -----------     
+r000000001 b000000000 PX100ME836 01-MAR-21 25-MAR-21          2           0     
+g000000001 b000000001 ASDFN253DS 21-FEB-21 10-MAR-21          5           0     
+r000000001 s000000002 DJHFNG5315 02-MAR-21 24-MAR-21         10           0     
+g000000002 s000000001 EWKLGQH512 10-MAR-21 05-JUN-21         20           0     
+
+
+Procedure created.
+
+No errors.
+Customer Information:                                                           
+Customer ID: r000000001, Name: Peter Griffin, Email: hansolo@hotmail.com,       
+Address: 255 Spooner St.                                                        
+Comic Book Orders:                                                              
+Order ID: PX100ME836, Item ID: b000000000, Title: Adventures of Superman, Price:
+29.99, Order Date: 01-MAR-21, Shipped Date: 25-MAR-21, Number Ordered: 2,       
+Discount Applied: , Shipping Fee: 0, Tax: 3, Order Total: 62.98                 
+T-Shirt Orders:                                                                 
+Order ID: DJHFNG5315, Item ID: s000000002, Size of T-Shirts: xl, Price: 25.95,  
+Order Date: 02-MAR-21, Shipped Date: 24-MAR-21, Number Ordered: 10, Discount    
+Applied: 25.95, Shipping Fee: 0, Tax: 11.68, Order Total: 245.23                
+
+PL/SQL procedure successfully completed.
+
+Customer Information:                                                           
+Customer ID: g000000001, Name: Stephen Curry, Email: wardellcurry@warriors.com, 
+Address: 300 Atherton Av.                                                       
+Comic Book Orders:                                                              
+T-Shirt Orders:                                                                 
+
+PL/SQL procedure successfully completed.
+
+Customer Information:                                                           
+Customer ID: g000000002, Name: Homie Dawg, Email: yaboi@gmail.com, Address: Lmao
+EggsDee St.                                                                     
+Comic Book Orders:                                                              
+T-Shirt Orders:                                                                 
+Order ID: EWKLGQH512, Item ID: s000000001, Size of T-Shirts: l, Price: 15.25,   
+Order Date: 10-MAR-21, Shipped Date: 05-JUN-21, Number Ordered: 20, Discount    
+Applied: 30.5, Shipping Fee: 0, Tax: 13.73, Order Total: 288.23                 
+
+PL/SQL procedure successfully completed.
+
+SQL> spool off;
