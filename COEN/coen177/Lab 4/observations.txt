@@ -1,0 +1,18 @@
+Part 1:
+The program first returns "Hello from thread # with thread ID #"
+The program prints the statement above several times before it starts printing "Thread # returned"
+You don't get the same result if you compile and run the program several times.
+The order of the thread returned is in order. 
+Playing multiple Youtube videos simultaneusly doesn't seem to make a difference. 
+The arg parameter in go() is a pointer that is a per-thread variable. Seperate copies are made for each thread and stored in the stack, but they
+still hold the same memory address.
+i is in main and is a shared variable with all threads because it resides in the data for the main thread, and becuase each thread
+receives a pointer to this variable as its arg.
+
+Part 2:
+The thread only returns "Hello from thread # with thread ID #" and does not print "Thread # returned".
+Again, you don't get the saame result if you compile and run the program several times. 
+Sometimes "Main thread done" is printed before the "Hello" statements are done printing.
+
+Step 3:
+Each thread takes a row of A and multiplies it with all the columns of B to get a row of C.

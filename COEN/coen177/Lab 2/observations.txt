@@ -1,0 +1,9 @@
+#Daren Liu
+#1/13/21
+#Lab2 observations
+#The text file compiles observations in lab 2. 
+
+When I compiled step 1's code, it gives me a segementation fault.
+With a delay of 3000 microseconds, it looks like the parent process and child process take turns printing, with an occasional overlap.
+With a delay of 500, there are more overlaps. 
+With a delay of 5000, it seems like there are no overlaps.

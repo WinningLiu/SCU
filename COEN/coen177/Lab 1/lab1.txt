@@ -1,0 +1,7 @@
+Daren Liu
+1/6/21
+Lab 1
+Observations during lab 1
+
+My program did not run at first, due to the fact that the sample code has $user as salagtash. Shell also seems to be very picky about where spaces go, as I had to correct those to match up with the sample code as well.
+

@@ -1,0 +1,21 @@
+When the minix opens up, I typed in root, and entered a new password. 
+
+In minix, type tcpd ftp /usr/bin/in.ftpd & and ifconfig for the IP address.
+
+In terminal, type ftp <IP address>.
+
+Change to the /usr/src/kernel directory in terminal.
+
+Type in main.c and exit to access the local directory.
+
+Edit main.c.
+
+Add a printf statement in the annouce() function.
+
+In terminal, type ftp <IP address> once again, and change to the /usr/src/kernel directory and type put main.c.
+
+In minix, go to the /usr/src directory and type make world.
+
+Once minix is finished recompiled, type reboot.
+
+After minix is rebooted, the message will print in the minix.

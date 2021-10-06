@@ -1,0 +1,32 @@
+Daren Liu
+1/25/21
+Lab 3 Observations
+
+Step 1:
+Step one seems to print out the files in the current directory but in a vertical manner instead of listing them horizontally. \
+It prints the contents of the directory one at a time.
+It runs the command "ls | more"
+
+Step 2:
+prints out the executable with a space in between each character, like 
+. / l a b 3 _ 2
+If there are arguments passed in as well, then those arguments are spaced similarly as well.
+
+Step 3:
+Prints out the contents of the directory with the same spacing in step 2.
+
+Step 4:
+Prints out the contents of /etc/passwd but only with they keyworkd root, so it runs the command "cat /etc/passwd | grep root".
+
+Step 5:
+In this case, the arguments passed in from the command line will be written into buffer, which only the producer uses. The producer then writes
+the contents into fds[1]. On the consumer side, it reads fds[0] and stores it in buff, which only the consumer uses. It then writes the values 
+that are in buff into the terminal using write().
+
+Step 6:
+Returns "Hello" 10 times with iteration in the order 
+2 7 4 3 0 5 6 4 9 9.
+
+The reason why the program repeats 9 twice is because it is passing in the address of i to the thread. When the thread retreives i, the for loop might
+have already moved on to the next iteration, which results in a loss of one number.  
+Threads print in different orders than the order it was created due to the fact that the scheduler determines which thread runs first. 

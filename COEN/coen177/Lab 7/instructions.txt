@@ -1,0 +1,20 @@
+Daren Liu
+2/26/21
+Lab 7 Instructions
+
+Step 1:
+Locate file proc.c in /usr/src/kernel
+
+Step 2:
+Locate the function pick_proc. In side the for loop, 
+add a code that will randomly select another queue if the current 
+queue is > 3. 
+
+if (random <= 2 && q > 3)
+	  {
+		  q = (q+4)%NR_SCHED_QUEUES;
+	  }
+
+Step 3:
+Run make world in /usr/src and reboot. When the system reboots, 
+it should take significantly longer than the startup sequence at first.

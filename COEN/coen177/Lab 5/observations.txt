@@ -1,0 +1,9 @@
+Step 1:
+When compiled several times, the message in the threads prints 0-9 mostly in order, and on some occasions entirely in order.
+Thread i returns in order, although it returns most of the time after thread i+1 has run its message. in some cases, the return statement
+runs two times every time a thread prints its message.
+It differs from threadHello in that it assigns unique thread numbers to each thread instead of having duplicates. It also prints the threads somewhat 
+in order. 
+
+Step 2:
+When using mutex locks instead of semaphores, the output runs the same.
