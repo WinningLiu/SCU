@@ -64,15 +64,20 @@ def scan_line(pixels):
                 last = i
         fill_row(pixels, first, last, j)
 
+#Question 3
 def anti_alias(pixels):
     for j in range(0, col - 1):
         for i in range(0, row - 1):
+            # If current pixel is not color, and next pixel in x direction is, blur the current pixel
             if pixels[i, j] != color and pixels[i + 1, j] == color:
                 pixels[i, j] = blurred
+            # If next pixel in x direction is not color, and current is, blur next pixel
             elif pixels[i, j] == color and pixels[i + 1, j] != color:
                 pixels[i + 1, j] = blurred
+            # If current pixel is not color, and next pixel in y direction is, blur the current pixel
             elif pixels[i, j] != color and pixels[i, j + 1] == color:
                 pixels[i, j] = blurred
+            # If next pixel in y direction is not color, and current is, blur next pixel
             elif pixels[i, j] == color and pixels[i, j + 1] != color:
                 pixels[i, j + 1] = blurred
 
