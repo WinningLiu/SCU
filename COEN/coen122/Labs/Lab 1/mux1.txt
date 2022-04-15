@@ -1,0 +1,45 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 04/06/2022 03:14:11 PM
+// Design Name: 
+// Module Name: mux1
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module mux1(A, B, C, D, sel, out);
+input A, B, C, D;
+input [1:0] sel;
+wire output1, output2, output3;
+wire notSel0, notSel1;
+wire and1, and2, and3, and4;
+output out;
+
+not(output1, A); //not gate
+and(output2, A, B, C); //and gate
+or(output3, A, B, C); //or gate
+
+not(notSel0, sel[0]);
+not(notSel1 , sel[1]);
+
+and(and1, A, notSel0, notSel1);
+and(and2, B, notSel1, sel[0]);
+and(and3, C, sel[1], notSel0);
+and(and4, D, sel[1], sel[0]);
+
+or(out, and1, and2, and3, and4);
+
+endmodule
