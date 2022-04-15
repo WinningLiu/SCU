@@ -1,0 +1,182 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 04/13/2022 02:09:31 PM
+// Design Name: 
+// Module Name: ALU
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module ALU(A,B,add,inc,neg,sub,out,Z,N);
+
+input [7:0]A;
+input [7:0]B;
+input add, inc, neg, sub;
+output [7:0]out;
+output Z, N;
+wire [1:0]select;
+wire [7:0]negA;
+wire[7:0]outA;
+wire cout;
+
+wire [7:0]outB;
+
+twoToOne mux_B(B, neg, outB);
+
+wire not_sub;
+
+not(not_sub, sub);
+and(select[0], inc, not_sub);
+nor(select[1], add, inc);
+
+negate complement(A, negA);
+
+threeToOne mux_A(A, negA, select, outA);
+
+fullAdder fAdd(outA, outB, cout, out);
+
+reg one = 1;
+and(N, out[7], one);
+nor(Z, out[0], out[1], out[2], out[3], out[4], out[5], out[6], out[7]);
+
+endmodule
+
+module twoToOne(B, sel, out);
+
+input [7:0]B;
+input sel;
+output [7:0]out;//switch brackets
+wire not1;
+
+not(not1, sel);
+and(out[0], not1, B[0]);
+and(out[1], not1, B[1]);
+and(out[2], not1, B[2]);
+and(out[3], not1, B[3]);
+and(out[4], not1, B[4]);
+and(out[5], not1, B[5]);
+and(out[6], not1, B[6]);
+and(out[7], not1, B[7]);
+
+endmodule
+
+module threeToOne(A, negA, sel, out);
+
+input [7:0]A, negA;
+input [1:0]sel;
+output [7:0]out;
+
+wire not0, not1;
+wire [7:0]and0;
+wire [7:0]and1;
+wire [7:0]and2;
+
+not(not0, sel[0]);
+not(not1, sel[1]);
+
+and(and0[0], A[0], not1, not0);
+and(and0[1], A[1], not1, not0);
+and(and0[2], A[2], not1, not0);
+and(and0[3], A[3], not1, not0);
+and(and0[4], A[4], not1, not0);
+and(and0[5], A[5], not1, not0);
+and(and0[6], A[6], not1, not0);
+and(and0[7], A[7], not1, not0);
+
+and(and1[0], 1, not1, sel[0]);
+and(and1[1], 0, not1, sel[0]);
+and(and1[2], 0, not1, sel[0]);
+and(and1[3], 0, not1, sel[0]);
+and(and1[4], 0, not1, sel[0]);
+and(and1[5], 0, not1, sel[0]);
+and(and1[6], 0, not1, sel[0]);
+and(and1[7], 0, not1, sel[0]);
+
+and(and2[0], negA[0], sel[1], not0);
+and(and2[1], negA[1], sel[1], not0);
+and(and2[2], negA[2], sel[1], not0);
+and(and2[3], negA[3], sel[1], not0);
+and(and2[4], negA[4], sel[1], not0);
+and(and2[5], negA[5], sel[1], not0);
+and(and2[6], negA[6], sel[1], not0);
+and(and2[7], negA[7], sel[1], not0);
+
+or(out[0], and0[0], and1[0], and2[0]);
+or(out[1], and0[1], and1[1], and2[1]);
+or(out[2], and0[2], and1[2], and2[2]);
+or(out[3], and0[3], and1[3], and2[3]);
+or(out[4], and0[4], and1[4], and2[4]);
+or(out[5], and0[5], and1[5], and2[5]);
+or(out[6], and0[6], and1[6], and2[6]);
+or(out[7], and0[7], and1[7], and2[7]);
+
+endmodule
+
+module oneBitAdder(A, B, cin, cout, out);
+
+input A, B, cin;
+output cout, out;
+
+wire xor0, and0, and1;
+
+xor(xor0, A, B);
+xor(out, xor0, cin);
+
+and(and0, cin, xor0);
+and(and1, A, B);
+or(cout, and0, and1);
+
+endmodule
+
+module fullAdder(A, B, cout, sum);
+
+input [7:0]A, B;
+output cout;
+wire [6:0]cout_wire;
+output [7:0]sum;
+reg zero = 0;
+
+oneBitAdder adder0(A[0], B[0], zero, cout_wire[0], sum[0]);
+oneBitAdder adder1(A[1], B[1], cout_wire[0], cout_wire[1], sum[1]);
+oneBitAdder adder2(A[2], B[2], cout_wire[1], cout_wire[2], sum[2]);
+oneBitAdder adder3(A[3], B[3], cout_wire[2], cout_wire[3], sum[3]);
+oneBitAdder adder4(A[4], B[4], cout_wire[3], cout_wire[4], sum[4]);
+oneBitAdder adder5(A[5], B[5], cout_wire[4], cout_wire[5], sum[5]);
+oneBitAdder adder6(A[6], B[6], cout_wire[5], cout_wire[6], sum[6]);
+oneBitAdder adder7(A[7], B[7], cout_wire[6], cout, sum[7]);
+
+endmodule
+
+module negate(A, out);
+
+input [7:0]A;
+output [7:0]out;
+reg [7:0] one = 1;
+
+wire [7:0]newA;
+wire cout;
+not(newA[0], A[0]);
+not(newA[1], A[1]);
+not(newA[2], A[2]);
+not(newA[3], A[3]);
+not(newA[4], A[4]);
+not(newA[5], A[5]);
+not(newA[6], A[6]);
+not(newA[7], A[7]);
+
+fullAdder fAdder(newA, one, cout, out);
+
+endmodule

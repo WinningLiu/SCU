@@ -1,0 +1,121 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 04/13/2022 04:55:57 PM
+// Design Name: 
+// Module Name: tb_ALU
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module tb_ALU();
+reg [7:0] A;
+reg [7:0] B;
+reg add, inc, neg, sub;
+wire [7:0] out;
+wire Z, N;
+
+ALU test(A, B, add, inc, neg, sub, out, Z, N);
+
+initial
+begin
+//B+A
+A = 8'b0000_0011;
+B = 8'b0000_0011;
+add = 1;
+inc = 0;
+neg = 0;
+sub = 0;
+#50;
+
+A = 8'b0000_0001;
+B = 8'b1111_1111;
+add = 1;
+inc = 0;
+neg = 0;
+sub = 0;
+#50;
+
+//B+1
+A = 8'b0000_0011;
+B = 8'b0000_0011;
+add = 0;
+inc = 1;
+neg = 0;
+sub = 0;
+#50;
+
+A = 8'b0000_0001;
+B = 8'b1111_1111;
+add = 0;
+inc = 1;
+neg = 0;
+sub = 0;
+#50;
+
+//-A
+A = 8'b0000_0011;
+B = 8'b0000_0011;
+add = 0;
+inc = 0;
+neg = 1;
+sub = 0;
+#50;
+
+A = 8'b0000_0001;
+B = 8'b1111_1111;
+add = 0;
+inc = 0;
+neg = 1;
+sub = 0;
+#50;
+//B-A
+A = 8'b0000_0011;
+B = 8'b0000_0011;
+add = 0;
+inc = 0;
+neg = 0;
+sub = 1;
+#50;
+
+A = 8'b0000_0001;
+B = 8'b1111_1111;
+add = 0;
+inc = 0;
+neg = 0;
+sub = 1;
+#50
+//A
+A = 8'b0000_0011;
+B = 8'b0000_0011;
+add = 1;
+inc = 1;
+neg = 1;
+sub = 1;
+#50;
+
+A = 8'b0000_0001;
+B = 8'b1111_1111;
+add = 1;
+inc = 1;
+neg = 1;
+sub = 1;
+#50;
+
+
+$finish;
+end
+
+endmodule
